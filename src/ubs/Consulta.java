@@ -13,6 +13,7 @@ import java.io.FileReader;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -110,9 +111,54 @@ public class Consulta {
         }
     }
     public void mostrarTriagensAbertas(){
-        for(int i = 0; i < todas.size(); i++){
-            
-        }
+        lerConsultas();
+        int j = 0;
+        int i = 0;
+        do{
+            System.out.println("chegou aqui");
+            if(todas.get(i).triagem.finalizado == false){
+                System.out.println(++j + " - Nome: " + todas.get(i).nomePaciente);
+            }
+            i++;
+        }while(i < todas.size());
+    }
+    public void escolherTriagem(String emailRecebido){
+        Usuario usr = new Usuario();
+        String nomeEnfermeiro = usr.procurarPaciente(emailRecebido);
+        mostrarTriagensAbertas();
+        Scanner leitor = new Scanner(System.in);
+        int opcao = 0;
+        int triagemEscolhida = 0;
+        do{
+            System.out.print("Opcao: ");
+            opcao = leitor.nextInt();
+            int j = 0;
+            for(int i = 0; i < todas.size(); i++){
+                if(todas.get(i).triagem.finalizado == false){
+                    if(opcao == i){
+                        System.out.println("Você escolheu o paciente " + todas.get(i).nomePaciente);
+                        triagemEscolhida = i;
+                    }
+                }
+            }
+        }while(triagemEscolhida != opcao);
+        
+        System.out.println("\nRealizando atendimento...");
+        System.out.print("Temperatura do paciente(XX.XX): ");
+        double temperatura = leitor.nextDouble();
+        System.out.println("Pressão: ");
+        String pressao = leitor.nextLine();
+        System.out.println("Digite 1 para Alto risco, 2 para médio e 3 para baixo.");
+        System.out.print("Classificação de Risco: ");
+        int risco = leitor.nextInt();
+        
+        todas.get(triagemEscolhida).triagem.classificacaoDeRisco = risco;
+        todas.get(triagemEscolhida).triagem.pressão = pressao;
+        todas.get(triagemEscolhida).triagem.temperatura = temperatura;
+        todas.get(triagemEscolhida).triagem.autor = nomeEnfermeiro;
+        todas.get(triagemEscolhida).triagem.finalizado = true;
+        
+        salvarConsultas();
     }
 
 }

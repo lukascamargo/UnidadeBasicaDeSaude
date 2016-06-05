@@ -73,8 +73,10 @@ public class Sessao {
                     usr.showOptionsEnfermeiro();
                     System.out.print("R: ");
                     opcao = leitor.nextInt();
+                    Consulta con = new Consulta();
                     switch(opcao){
                         case 1:
+                            con.escolherTriagem(mail);
                             break;
                         default:
                             System.out.println("Ops! Opção inválida.");
