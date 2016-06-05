@@ -11,8 +11,9 @@ package ubs;
  */
 public class Triagem {
     
-    Double temperatura;
-    String pressão;
+    Double temperatura = 0.0;
+    String pressão = "Não iniciado";
     int classificacaoDeRisco;
+    boolean finalizado;
     
 }

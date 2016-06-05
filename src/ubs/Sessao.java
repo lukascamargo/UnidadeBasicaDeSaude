@@ -47,24 +47,39 @@ public class Sessao {
                 //System.out.println("Entrou no if");
                 int opcao = 0;
                 do{
-                    usr.showOptions();
+                    usr.showOptionsUsuario();
                     System.out.print("R: ");
                     opcao = leitor.nextInt();
+                    Consulta consulta = new Consulta();
                     switch(opcao){
                         case 1:
-                            Consulta consulta = new Consulta();
                             consulta.verificarConsultas(mail);
                             break;
                         case 2:
                             usr.escolherEspecialidade(mail);
                             break;
                         case 3:
+                            consulta.consultarProntuario(mail);
                             break;
                         default:
+                            System.out.println("Ops! Opção inválida");
                             break;
                     }
                 } while(opcao != 4);
                 
+            } else if(titulo.equals("enfermeiro")){
+                int opcao = 0;
+                do {
+                    usr.showOptionsEnfermeiro();
+                    System.out.print("R: ");
+                    opcao = leitor.nextInt();
+                    switch(opcao){
+                        case 1:
+                            break;
+                        default:
+                            System.out.println("Ops! Opção inválida.");
+                    }
+                } while(opcao != 2);
             }
         }
         

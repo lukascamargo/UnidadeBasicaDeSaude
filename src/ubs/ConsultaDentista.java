@@ -10,5 +10,6 @@ package ubs;
  * @author Lukas
  */
 public class ConsultaDentista extends Consulta{
-    
+    Triagem triagem = null;
+    PEP prontuario = null;
 }

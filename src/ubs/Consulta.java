@@ -27,12 +27,13 @@ public class Consulta {
     protected int dia;
     protected int mes;
     protected int ano;
+    Triagem triagem = new Triagem();
+    PEP prontuario = new PEP();
     
     
     public void novaConsulta(){
         
     } 
-    
     public void setData(int day, int month, int year){
         this.dia = day;
         this.mes = month;
@@ -41,7 +42,6 @@ public class Consulta {
     public String getData(){
         return this.dia + "/" + this.mes + "/" + this.ano;
     }
-    
     public boolean testaData(String data, String doctor){
         boolean retorno = false;
         for(int i = 0; i < todas.size(); i++){
@@ -52,16 +52,11 @@ public class Consulta {
         
         return retorno;
     }
-    
     public void salvarConsultas(){
         XStream xstr = new XStream(new DomDriver());
-        xstr.alias("consulta", Consulta.class);
-        xstr.alias("triagem", Triagem.class);
-        xstr.alias("pep", PEP.class);
         String xml = xstr.toXML(todas);
         geraArquivo(xml);
     }
-    
     public void geraArquivo(String xml){
         PrintWriter print = null;
         File file = new File("C:\\Users\\Lukas\\Documents\\GitHub\\UnidadeBasicaDeSaude\\src\\xml\\consultas.xml");
@@ -75,31 +70,49 @@ public class Consulta {
         print.flush();
         print.close();
     }
-    
     public void lerConsultas(){
         try {
             FileReader ler = new FileReader("C:\\Users\\Lukas\\Documents\\GitHub\\UnidadeBasicaDeSaude\\src\\xml\\consultas.xml");
             XStream xstr = new XStream(new DomDriver());
-            xstr.alias("consulta", Consulta.class);
-            xstr.alias("triagem", Triagem.class);
-            xstr.alias("pep", PEP.class);
             todas = (ArrayList<Consulta>) xstr.fromXML(ler);
         
         } catch (FileNotFoundException ex) {
             ex.printStackTrace();
         }
     }
-    
     public void adicionarNaLista(Consulta obj){
         todas.add(obj);
     }
-    
-    public void verificarConsultas(String email){
+    public void verificarConsultas(String emailRecebido){
         lerConsultas();
+        Usuario usr = new Usuario();
+        String nome = usr.procurarPaciente(emailRecebido);
+        System.out.println("\n");
         for(int i = 0; i < todas.size(); i++){
-        
+            if(todas.get(i).nomePaciente.equals(nome)){
+                System.out.print("- Consulta dia " + todas.get(i).getData());
+                System.out.println(", com " + todas.get(i).nomeMedico);
+            }
         }
     };
-    
+    public void consultarProntuario(String emailRecebido){
+        lerConsultas();
+        Usuario usr = new Usuario();
+        String nome = usr.procurarPaciente(emailRecebido);
+        System.out.println("\n");
+        
+        for(int i = 0; i < todas.size(); i++){
+            if(todas.get(i).nomePaciente.equals(nome)){
+               System.out.println("\nAutor: " + todas.get(i).prontuario.autor);
+               System.out.println("Texto: " + todas.get(i).prontuario.texto);
+               System.out.println("Ultima atualizacao: " + todas.get(i).prontuario.data);
+            }
+        }
+    }
+    public void mostrarTriagensAbertas(){
+        for(int i = 0; i < todas.size(); i++){
+            
+        }
+    }
 
 }

@@ -40,7 +40,6 @@ public class Usuario {
     public String getTitulo(){
         return this.titulo;
     }
-    
     public String findTitutlo(String emailRecebido){
         String tittle = null;
         lerUsuarios();
@@ -51,19 +50,15 @@ public class Usuario {
         }
         return tittle;
     }
-    
     public String getSenha(){
         return this.senha;
     }
-    
     public void adicionarNaLista(Usuario obj){
         todos.add(obj);
     }
-    
     public String getEmail(){
         return this.email;
     }
-    
     public void lerUsuarios(){
         try {
             FileReader ler = new FileReader("C:\\Users\\Lukas\\Documents\\GitHub\\UnidadeBasicaDeSaude\\src\\xml\\usuarios.xml");
@@ -113,7 +108,6 @@ public class Usuario {
         } 
         return retorno;
     }
-    
     public String logar(String emailPassado, String senhaPassada){
         String retorno = null;
         for(int i = 0; i < todos.size(); i++){
@@ -128,13 +122,17 @@ public class Usuario {
     private Boolean validarLogin(String emailUsuario, String senha){
         return this.email.equals(emailUsuario) && this.senha.equals(senha);
     }
-    
-    public void showOptions(){
+    public void showOptionsUsuario(){
         System.out.println("\nEscolha uma opção: ");
         System.out.println("1 - Verificar meus agendamentos");
         System.out.println("2 - Agendar uma nova consulta");
         System.out.println("3 - Consultar meu prontuário");
         System.out.println("4 - Encerrar");
+    }
+    public void showOptionsEnfermeiro(){
+        System.out.println("\nEscolha uma opção: ");
+        System.out.println("1 - Atender");
+        System.out.println("2 - Sair");
     }
     public void showOptionsEspecialidade(){
         System.out.println("\nEscolha uma opção: ");
@@ -144,26 +142,24 @@ public class Usuario {
     }
     public void showOptionsMedicos(){
         int j = 0;
+        System.out.print("\n");
         for(int i = 0; i < todos.size(); i++){
-            System.out.print("\n");
             if(todos.get(i).getTitulo().equals("medico")){
                 System.out.println("" + ++j + " - " + todos.get(i).sobrenome + ", " + todos.get(i).nome);
                 medicoEscolhido = i;
             }
         }
     }
-    
     public void showOptionsDentistas(){
         int j = 0;
+        System.out.print("\n");
         for(int i = 0; i < todos.size(); i++){
-            System.out.print("\n");
             if(todos.get(i).getTitulo().equals("dentista")){
-                System.out.println("" + ++j + " - " + todos.get(i).sobrenome + ", " + todos.get(i).nome);
+                System.out.println(++j + " - " + todos.get(i).sobrenome + ", " + todos.get(i).nome);
                 medicoEscolhido = i;
             }
         }
     }
-    
     public void escolherEspecialidade(String email){
         Scanner leitor = new Scanner(System.in);
         int opcao = 0;
@@ -189,7 +185,6 @@ public class Usuario {
         }while(opcao != 3);
         
     }
-    
     public void agendamentoMedico(String email){
         //System.out.println("entrou no agendamento");
         showOptionsMedicos();
@@ -231,11 +226,11 @@ public class Usuario {
             
             consulta.setData(dia, mes, ano);
             consulta.adicionarNaLista(consulta);
+            consulta.prontuario.autor = nomeMedico;
             System.out.println("Consulta agendada!");
             consulta.salvarConsultas();
         }
     }
-    
     public void agendamentoDentista(String email){
         //System.out.println("entrou no agendamento");
         showOptionsDentistas();
@@ -277,11 +272,14 @@ public class Usuario {
             
             consulta.setData(dia, mes, ano);
             consulta.adicionarNaLista(consulta);
+            consulta.prontuario.autor = nomeDentista;
+            consulta.triagem.classificacaoDeRisco = 0;
+            consulta.triagem.pressão = null;
+            consulta.triagem.temperatura = 0.0;
             System.out.println("Consulta agendada!");
             consulta.salvarConsultas();
         }
     }
-    
     public int findPaciente(String emailRecebido){
         int paciente = -1;
         
@@ -293,5 +291,18 @@ public class Usuario {
         return paciente;
         
     }
+    public String procurarPaciente(String emailRecebido){
+        lerUsuarios();
+        String passarNome = null;
+        int i = 0;
+        do{
+            if(todos.get(i).email.equals(emailRecebido)){
+                passarNome = todos.get(i).nome + " " + todos.get(i).sobrenome;
+            }
+            i++;
+        } while(i < todos.size());
+        return passarNome;
+     }
+    
     
 }

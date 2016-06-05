@@ -13,9 +13,9 @@ import java.util.Date;
  * @author Lukas
  */
 public class PEP {
-    protected String autor;
+    protected String autor = "Não iniciado";
     protected Date data;
-    protected String texto;
+    protected String texto = "Não iniciado";
     
     public PEP(){
         this.data = new Date();

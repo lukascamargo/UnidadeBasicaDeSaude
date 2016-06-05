@@ -10,6 +10,9 @@ package ubs;
  * @author Lukas
  */
 public class ConsultaMedica extends Consulta {
-    Triagem triagem = new Triagem();
-    PEP prontuario = new PEP();
+    public String getProntuario(){
+        return this.prontuario.texto;
+    }
+    
+    
 }

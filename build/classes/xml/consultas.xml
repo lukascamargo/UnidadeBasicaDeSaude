@@ -2,13 +2,13 @@
   <unserializable-parents/>
   <list>
     <default>
-      <size>6</size>
+      <size>4</size>
     </default>
-    <int>6</int>
-    <consulta>
+    <int>4</int>
+    <ubs.ConsultaMedica>
       <todas class="ubs.Consulta$1" reference="../../.."/>
       <nomePaciente>Lukas Fialho</nomePaciente>
-      <nomeMedico>Lukas Fialho</nomeMedico>
+      <nomeMedico>Ewerton Pinheiro</nomeMedico>
       <dia>7</dia>
       <mes>6</mes>
       <ano>2016</ano>
@@ -16,13 +16,13 @@
         <classificacaoDeRisco>0</classificacaoDeRisco>
       </triagem>
       <prontuario>
-        <data>2016-06-05 03:33:59.152 UTC</data>
+        <data>2016-06-05 05:06:05.106 UTC</data>
       </prontuario>
-    </consulta>
-    <consulta>
+    </ubs.ConsultaMedica>
+    <ubs.ConsultaMedica>
       <todas class="ubs.Consulta$1" reference="../../.."/>
       <nomePaciente>Lukas Fialho</nomePaciente>
-      <nomeMedico>Lukas Fialho</nomeMedico>
+      <nomeMedico>Luiz Camargo</nomeMedico>
       <dia>7</dia>
       <mes>7</mes>
       <ano>2016</ano>
@@ -30,82 +30,49 @@
         <classificacaoDeRisco>0</classificacaoDeRisco>
       </triagem>
       <prontuario>
-        <data>2016-06-05 03:44:08.973 UTC</data>
+        <data>2016-06-05 05:06:14.134 UTC</data>
       </prontuario>
-    </consulta>
-    <consulta>
-      <todas class="ubs.Consulta$1" reference="../../.."/>
-      <nomePaciente>Lukas Fialho</nomePaciente>
-      <nomeMedico>Ewerton Pinheiro</nomeMedico>
-      <dia>7</dia>
-      <mes>6</mes>
-      <ano>2016</ano>
-      <triagem>
-        <classificacaoDeRisco>0</classificacaoDeRisco>
-      </triagem>
-      <prontuario>
-        <data>2016-06-05 03:57:47.164 UTC</data>
-      </prontuario>
-    </consulta>
-    <consulta>
+    </ubs.ConsultaMedica>
+    <ubs.ConsultaMedica>
       <todas class="ubs.Consulta$1" reference="../../.."/>
       <nomePaciente>Lukas Fialho</nomePaciente>
       <nomeMedico>Luiz Camargo</nomeMedico>
-      <dia>7</dia>
+      <dia>5</dia>
       <mes>6</mes>
       <ano>2016</ano>
       <triagem>
+        <temperatura>0.0</temperatura>
+        <pressão>Não iniciado</pressão>
         <classificacaoDeRisco>0</classificacaoDeRisco>
       </triagem>
       <prontuario>
-        <data>2016-06-05 03:58:14.474 UTC</data>
+        <autor>Não iniciado</autor>
+        <data>2016-06-05 06:00:43.661 UTC</data>
+        <texto>Não iniciado</texto>
       </prontuario>
-    </consulta>
-    <consulta>
+    </ubs.ConsultaMedica>
+    <ubs.ConsultaDentista>
       <todas class="ubs.Consulta$1" reference="../../.."/>
       <nomePaciente>Lukas Fialho</nomePaciente>
-      <nomeMedico>Lukas Camargo</nomeMedico>
-      <dia>7</dia>
+      <nomeMedico>Maria Maddi</nomeMedico>
+      <dia>10</dia>
       <mes>6</mes>
       <ano>2016</ano>
-      <triagem>
+      <triagem defined-in="ubs.Consulta">
+        <temperatura>0.0</temperatura>
+        <pressão>Não iniciado</pressão>
         <classificacaoDeRisco>0</classificacaoDeRisco>
       </triagem>
-      <prontuario>
-        <data>2016-06-05 03:58:23.194 UTC</data>
+      <prontuario defined-in="ubs.Consulta">
+        <autor>Não iniciado</autor>
+        <data>2016-06-05 06:01:41.267 UTC</data>
+        <texto>Não iniciado</texto>
       </prontuario>
-    </consulta>
-    <consulta>
-      <todas class="ubs.Consulta$1" reference="../../.."/>
-      <nomePaciente>Kathleen Rocha</nomePaciente>
-      <nomeMedico>Ewerton Pinheiro</nomeMedico>
-      <dia>8</dia>
-      <mes>6</mes>
-      <ano>2016</ano>
-      <triagem>
-        <classificacaoDeRisco>0</classificacaoDeRisco>
-      </triagem>
-      <prontuario>
-        <data>2016-06-05 03:59:50.188 UTC</data>
-      </prontuario>
-    </consulta>
+    </ubs.ConsultaDentista>
   </list>
   <ubs.Consulta_-1>
     <default>
-      <outer-class>
-        <todas class="ubs.Consulta$1" reference="../../../.."/>
-        <nomePaciente>Lukas Fialho</nomePaciente>
-        <nomeMedico>Lukas Fialho</nomeMedico>
-        <dia>6</dia>
-        <mes>6</mes>
-        <ano>2016</ano>
-        <triagem>
-          <classificacaoDeRisco>0</classificacaoDeRisco>
-        </triagem>
-        <prontuario>
-          <data>2016-06-05 03:26:12.788 UTC</data>
-        </prontuario>
-      </outer-class>
+      <outer-class class="ubs.ConsultaMedica" reference="../../../list/ubs.ConsultaMedica"/>
     </default>
   </ubs.Consulta_-1>
 </ubs.Consulta_-1>
