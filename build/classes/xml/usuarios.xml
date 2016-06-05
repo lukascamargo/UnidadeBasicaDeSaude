@@ -2,9 +2,9 @@
   <unserializable-parents/>
   <list>
     <default>
-      <size>3</size>
+      <size>11</size>
     </default>
-    <int>3</int>
+    <int>11</int>
     <usuario>
       <email>lukas.fialho@gmail.com</email>
       <nome>Lukas</nome>
@@ -12,6 +12,8 @@
       <senha>1234567</senha>
       <todos class="ubs.Usuario$1" reference="../../.."/>
       <titulo>paciente</titulo>
+      <mostrarQuantosMedicos>0</mostrarQuantosMedicos>
+      <medicoEscolhido>0</medicoEscolhido>
     </usuario>
     <medico>
       <email>lukas.camargo@dimensiondata.com</email>
@@ -20,6 +22,8 @@
       <senha>1234567</senha>
       <todos class="ubs.Usuario$1" reference="../../.."/>
       <titulo>medico</titulo>
+      <mostrarQuantosMedicos>0</mostrarQuantosMedicos>
+      <medicoEscolhido>0</medicoEscolhido>
       <crm>91819819189</crm>
     </medico>
     <medico>
@@ -29,8 +33,97 @@
       <senha>1234567</senha>
       <todos class="ubs.Usuario$1" reference="../../.."/>
       <titulo>medico</titulo>
+      <mostrarQuantosMedicos>0</mostrarQuantosMedicos>
+      <medicoEscolhido>0</medicoEscolhido>
       <crm>9189189189189</crm>
     </medico>
+    <medico>
+      <email>ewerton.pinheiro@dimensiondata.com</email>
+      <nome>Ewerton</nome>
+      <sobrenome>Pinheiro</sobrenome>
+      <senha>1234567</senha>
+      <todos class="ubs.Usuario$1" reference="../../.."/>
+      <titulo>medico</titulo>
+      <mostrarQuantosMedicos>0</mostrarQuantosMedicos>
+      <medicoEscolhido>0</medicoEscolhido>
+      <crm>41891891891</crm>
+    </medico>
+    <usuario>
+      <email>kathleen.rocha@hotmail.com</email>
+      <nome>Kathleen</nome>
+      <sobrenome>Rocha</sobrenome>
+      <senha>1234567</senha>
+      <todos class="ubs.Usuario$1" reference="../../.."/>
+      <titulo>paciente</titulo>
+      <mostrarQuantosMedicos>0</mostrarQuantosMedicos>
+      <medicoEscolhido>0</medicoEscolhido>
+    </usuario>
+    <dentista>
+      <email>ze.roberto@gmail.com</email>
+      <nome>Ze</nome>
+      <sobrenome>Roberto</sobrenome>
+      <senha>1234567</senha>
+      <todos class="ubs.Usuario$1" reference="../../.."/>
+      <titulo>dentista</titulo>
+      <mostrarQuantosMedicos>0</mostrarQuantosMedicos>
+      <medicoEscolhido>0</medicoEscolhido>
+      <cfo>894894894</cfo>
+    </dentista>
+    <dentista>
+      <email>roberto.maddi@gmail.com</email>
+      <nome>Roberto</nome>
+      <sobrenome>Maddi</sobrenome>
+      <senha>1234567</senha>
+      <todos class="ubs.Usuario$1" reference="../../.."/>
+      <titulo>dentista</titulo>
+      <mostrarQuantosMedicos>0</mostrarQuantosMedicos>
+      <medicoEscolhido>0</medicoEscolhido>
+      <cfo>4894894949</cfo>
+    </dentista>
+    <dentista>
+      <email>maria.maddi@hotmail.com</email>
+      <nome>Maria</nome>
+      <sobrenome>Maddi</sobrenome>
+      <senha>1234567</senha>
+      <todos class="ubs.Usuario$1" reference="../../.."/>
+      <titulo>dentista</titulo>
+      <mostrarQuantosMedicos>0</mostrarQuantosMedicos>
+      <medicoEscolhido>0</medicoEscolhido>
+      <cfo>481891891</cfo>
+    </dentista>
+    <enfermeiro>
+      <email>nfialhos@hotmail.com</email>
+      <nome>Natalina</nome>
+      <sobrenome>Fialho</sobrenome>
+      <senha>1234567</senha>
+      <todos class="ubs.Usuario$1" reference="../../.."/>
+      <titulo>enfermeiro</titulo>
+      <mostrarQuantosMedicos>0</mostrarQuantosMedicos>
+      <medicoEscolhido>0</medicoEscolhido>
+      <coren>4984894894</coren>
+    </enfermeiro>
+    <enfermeiro>
+      <email>ailton.rocha@uol.com.br</email>
+      <nome>Ailton</nome>
+      <sobrenome>Rocha</sobrenome>
+      <senha>1234567</senha>
+      <todos class="ubs.Usuario$1" reference="../../.."/>
+      <titulo>enfermeiro</titulo>
+      <mostrarQuantosMedicos>0</mostrarQuantosMedicos>
+      <medicoEscolhido>0</medicoEscolhido>
+      <coren>1651189461</coren>
+    </enfermeiro>
+    <enfermeiro>
+      <email>ivanildasoares@eistein.com</email>
+      <nome>Ivanilda</nome>
+      <sobrenome>Soares</sobrenome>
+      <senha>1234567</senha>
+      <todos class="ubs.Usuario$1" reference="../../.."/>
+      <titulo>enfermeiro</titulo>
+      <mostrarQuantosMedicos>0</mostrarQuantosMedicos>
+      <medicoEscolhido>0</medicoEscolhido>
+      <coren>489498489</coren>
+    </enfermeiro>
   </list>
   <ubs.Usuario_-1>
     <default>

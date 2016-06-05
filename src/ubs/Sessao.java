@@ -36,7 +36,7 @@ public class Sessao {
         Scanner leitor = new Scanner(System.in);
         String titulo;
         if(mail == null){
-            System.out.println("Email nulo");
+            System.out.println("Email ou senha incorretos");
         } else {
             Usuario usr = new Usuario();
             titulo = (String) usr.findTitutlo(mail);
@@ -45,13 +45,15 @@ public class Sessao {
             //System.out.println(titulo.equals("paciente"));
             if(titulo.equals("paciente")){
                 //System.out.println("Entrou no if");
-                usr.showOptions();
                 int opcao = 0;
                 do{
+                    usr.showOptions();
                     System.out.print("R: ");
                     opcao = leitor.nextInt();
                     switch(opcao){
                         case 1:
+                            Consulta consulta = new Consulta();
+                            consulta.verificarConsultas(mail);
                             break;
                         case 2:
                             usr.escolherEspecialidade(mail);

@@ -202,11 +202,11 @@ public class Cadastrar {
         enf.senha = leitor.nextLine();
         
         //cadastrar crm
-        System.out.println("Digite seu CRM: ");
+        System.out.println("Digite seu COREN: ");
         System.out.print("R: ");
         enf.coren = leitor.nextLine();
         
-        System.out.println("\nNome: " + enf.nome + " " + enf.sobrenome + ", CRM " + enf.coren);
+        System.out.println("\nNome: " + enf.nome + " " + enf.sobrenome + ", COREN " + enf.coren);
         System.out.println("Email: " + enf.email);
         System.out.println("Digite 1 caso queira confirmar ou 2 caso queira cancelar cadastro.");
         int opcao = 0;
@@ -279,11 +279,11 @@ public class Cadastrar {
         dente.senha = leitor.nextLine();
         
         //cadastrar crm
-        System.out.println("Digite seu CRM: ");
+        System.out.println("Digite seu CFO: ");
         System.out.print("R: ");
         dente.cfo = leitor.nextLine();
         
-        System.out.println("\nNome: " + dente.nome + " " + dente.sobrenome + ", CRM " + dente.cfo);
+        System.out.println("\nNome: " + dente.nome + " " + dente.sobrenome + ", CFO " + dente.cfo);
         System.out.println("Email: " + dente.email);
         System.out.println("Digite 1 caso queira confirmar ou 2 caso queira cancelar cadastro.");
         int opcao = 0;

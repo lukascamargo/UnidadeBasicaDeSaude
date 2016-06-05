@@ -1,0 +1,111 @@
+<ubs.Consulta_-1 serialization="custom">
+  <unserializable-parents/>
+  <list>
+    <default>
+      <size>6</size>
+    </default>
+    <int>6</int>
+    <consulta>
+      <todas class="ubs.Consulta$1" reference="../../.."/>
+      <nomePaciente>Lukas Fialho</nomePaciente>
+      <nomeMedico>Lukas Fialho</nomeMedico>
+      <dia>7</dia>
+      <mes>6</mes>
+      <ano>2016</ano>
+      <triagem>
+        <classificacaoDeRisco>0</classificacaoDeRisco>
+      </triagem>
+      <prontuario>
+        <data>2016-06-05 03:33:59.152 UTC</data>
+      </prontuario>
+    </consulta>
+    <consulta>
+      <todas class="ubs.Consulta$1" reference="../../.."/>
+      <nomePaciente>Lukas Fialho</nomePaciente>
+      <nomeMedico>Lukas Fialho</nomeMedico>
+      <dia>7</dia>
+      <mes>7</mes>
+      <ano>2016</ano>
+      <triagem>
+        <classificacaoDeRisco>0</classificacaoDeRisco>
+      </triagem>
+      <prontuario>
+        <data>2016-06-05 03:44:08.973 UTC</data>
+      </prontuario>
+    </consulta>
+    <consulta>
+      <todas class="ubs.Consulta$1" reference="../../.."/>
+      <nomePaciente>Lukas Fialho</nomePaciente>
+      <nomeMedico>Ewerton Pinheiro</nomeMedico>
+      <dia>7</dia>
+      <mes>6</mes>
+      <ano>2016</ano>
+      <triagem>
+        <classificacaoDeRisco>0</classificacaoDeRisco>
+      </triagem>
+      <prontuario>
+        <data>2016-06-05 03:57:47.164 UTC</data>
+      </prontuario>
+    </consulta>
+    <consulta>
+      <todas class="ubs.Consulta$1" reference="../../.."/>
+      <nomePaciente>Lukas Fialho</nomePaciente>
+      <nomeMedico>Luiz Camargo</nomeMedico>
+      <dia>7</dia>
+      <mes>6</mes>
+      <ano>2016</ano>
+      <triagem>
+        <classificacaoDeRisco>0</classificacaoDeRisco>
+      </triagem>
+      <prontuario>
+        <data>2016-06-05 03:58:14.474 UTC</data>
+      </prontuario>
+    </consulta>
+    <consulta>
+      <todas class="ubs.Consulta$1" reference="../../.."/>
+      <nomePaciente>Lukas Fialho</nomePaciente>
+      <nomeMedico>Lukas Camargo</nomeMedico>
+      <dia>7</dia>
+      <mes>6</mes>
+      <ano>2016</ano>
+      <triagem>
+        <classificacaoDeRisco>0</classificacaoDeRisco>
+      </triagem>
+      <prontuario>
+        <data>2016-06-05 03:58:23.194 UTC</data>
+      </prontuario>
+    </consulta>
+    <consulta>
+      <todas class="ubs.Consulta$1" reference="../../.."/>
+      <nomePaciente>Kathleen Rocha</nomePaciente>
+      <nomeMedico>Ewerton Pinheiro</nomeMedico>
+      <dia>8</dia>
+      <mes>6</mes>
+      <ano>2016</ano>
+      <triagem>
+        <classificacaoDeRisco>0</classificacaoDeRisco>
+      </triagem>
+      <prontuario>
+        <data>2016-06-05 03:59:50.188 UTC</data>
+      </prontuario>
+    </consulta>
+  </list>
+  <ubs.Consulta_-1>
+    <default>
+      <outer-class>
+        <todas class="ubs.Consulta$1" reference="../../../.."/>
+        <nomePaciente>Lukas Fialho</nomePaciente>
+        <nomeMedico>Lukas Fialho</nomeMedico>
+        <dia>6</dia>
+        <mes>6</mes>
+        <ano>2016</ano>
+        <triagem>
+          <classificacaoDeRisco>0</classificacaoDeRisco>
+        </triagem>
+        <prontuario>
+          <data>2016-06-05 03:26:12.788 UTC</data>
+        </prontuario>
+      </outer-class>
+    </default>
+  </ubs.Consulta_-1>
+</ubs.Consulta_-1>

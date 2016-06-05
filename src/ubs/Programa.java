@@ -37,7 +37,8 @@ public class Programa {
     }
 
     public static void showOptions() {
-        System.out.println("\n1 - Logar");
+        System.out.println("\nEscolha uma opção: ");
+        System.out.println("1 - Logar");
         System.out.println("2 - Cadastrar");
         System.out.println("3 - Finalizar");
     }
@@ -66,7 +67,8 @@ public class Programa {
             }
     }
     public static void showOptionsCadastrar(){
-        System.out.println("\n1 - Paciente");
+        System.out.println("\nEscolha uma opção: ");
+        System.out.println("1 - Paciente");
         System.out.println("2 - Medico");
         System.out.println("3 - Enfermeiro");
         System.out.println("4 - Dentista");

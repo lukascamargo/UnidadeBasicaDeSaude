@@ -32,6 +32,7 @@ public class Usuario {
     protected static Usuario atual;
     protected String titulo = "usuario";
     int mostrarQuantosMedicos;
+    int medicoEscolhido;
     
     public String getNome(){
         return this.nome;
@@ -129,51 +130,67 @@ public class Usuario {
     }
     
     public void showOptions(){
-        System.out.println("\n1 - Verificar meus agendamentos");
-        System.out.println("2 -  Agendar uma nova consulta");
+        System.out.println("\nEscolha uma opção: ");
+        System.out.println("1 - Verificar meus agendamentos");
+        System.out.println("2 - Agendar uma nova consulta");
         System.out.println("3 - Consultar meu prontuário");
         System.out.println("4 - Encerrar");
     }
     public void showOptionsEspecialidade(){
-        System.out.println("\n1 - Médico");
+        System.out.println("\nEscolha uma opção: ");
+        System.out.println("1 - Médico");
         System.out.println("2 - Dentista");
         System.out.println("3 - Sair");
     }
     public void showOptionsMedicos(){
         int j = 0;
         for(int i = 0; i < todos.size(); i++){
+            System.out.print("\n");
             if(todos.get(i).getTitulo().equals("medico")){
                 System.out.println("" + ++j + " - " + todos.get(i).sobrenome + ", " + todos.get(i).nome);
+                medicoEscolhido = i;
             }
         }
     }
+    
     public void showOptionsDentistas(){
+        int j = 0;
+        for(int i = 0; i < todos.size(); i++){
+            System.out.print("\n");
+            if(todos.get(i).getTitulo().equals("dentista")){
+                System.out.println("" + ++j + " - " + todos.get(i).sobrenome + ", " + todos.get(i).nome);
+                medicoEscolhido = i;
+            }
+        }
     }
     
     public void escolherEspecialidade(String email){
         Scanner leitor = new Scanner(System.in);
         int opcao = 0;
-        showOptionsEspecialidade();
+        
         do{
+            showOptionsEspecialidade();
             System.out.print("R: ");
             opcao = leitor.nextInt();
             switch(opcao){
                 case 1:
-                    agendamento(email);
+                    agendamentoMedico(email);
                     break;
                 case 2:
+                    agendamentoDentista(email);
                     break;
                 case 3:
                     
                     break;
                 default:
+                    System.out.println("Ops! Opção inválida.");
                     break;
             }
         }while(opcao != 3);
         
     }
     
-    public void agendamento(String email){
+    public void agendamentoMedico(String email){
         //System.out.println("entrou no agendamento");
         showOptionsMedicos();
         Scanner leitor = new Scanner(System.in);
@@ -192,9 +209,10 @@ public class Usuario {
             }
         }
         int paciente = findPaciente(email);
-        Consulta consulta = new Consulta();
+        ConsultaMedica consulta = new ConsultaMedica();
         consulta.nomePaciente = todos.get(paciente).nome + " " + todos.get(paciente).sobrenome;
-        consulta.nomeMedico = todos.get(medicoEscolhido).nome + " " + todos.get(medicoEscolhido).sobrenome;
+        String nomeMedico = todos.get(medicoEscolhido).nome + " " + todos.get(medicoEscolhido).sobrenome;
+        consulta.nomeMedico = nomeMedico;
         
         System.out.println("Digite a data desejada: ");
         //To be continued 
@@ -206,11 +224,62 @@ public class Usuario {
         System.out.print("Ano: ");
         int ano = leitor.nextInt();
         
-        consulta.setData(dia, mes, ano);
+        consulta.lerConsultas();
+        if(consulta.testaData(dia + "/" + mes + "/" + ano, nomeMedico)){
+            System.out.println("Data já reservada.");
+        }else{
+            
+            consulta.setData(dia, mes, ano);
+            consulta.adicionarNaLista(consulta);
+            System.out.println("Consulta agendada!");
+            consulta.salvarConsultas();
+        }
+    }
+    
+    public void agendamentoDentista(String email){
+        //System.out.println("entrou no agendamento");
+        showOptionsDentistas();
+        Scanner leitor = new Scanner(System.in);
+        int opcao = 0;
+        int dentistaEscolhido = 0;
+        System.out.print("R: ");
+        opcao = leitor.nextInt();
+        int j = 0;
+        for(int i = 0; i < todos.size(); i++){
+            if(todos.get(i).getTitulo().equals("dentista")){
+                ++j;
+                if(opcao == j){
+                    System.out.println("Você escolheu " + todos.get(i).nome + " " + todos.get(i).sobrenome);
+                    dentistaEscolhido = i;
+                }
+            }
+        }
+        int paciente = findPaciente(email);
+        ConsultaDentista consulta = new ConsultaDentista();
+        consulta.nomePaciente = todos.get(paciente).nome + " " + todos.get(paciente).sobrenome;
+        String nomeDentista = todos.get(dentistaEscolhido).nome + " " + todos.get(dentistaEscolhido).sobrenome;
+        consulta.nomeMedico = nomeDentista;
         
+        System.out.println("Digite a data desejada: ");
+        //To be continued 
         
+        System.out.print("Dia: ");
+        int dia = leitor.nextInt();
+        System.out.print("Mes: ");
+        int mes = leitor.nextInt();
+        System.out.print("Ano: ");
+        int ano = leitor.nextInt();
         
-        
+        consulta.lerConsultas();
+        if(consulta.testaData(dia + "/" + mes + "/" + ano, nomeDentista)){
+            System.out.println("Data já reservada.");
+        }else{
+            
+            consulta.setData(dia, mes, ano);
+            consulta.adicionarNaLista(consulta);
+            System.out.println("Consulta agendada!");
+            consulta.salvarConsultas();
+        }
     }
     
     public int findPaciente(String emailRecebido){
