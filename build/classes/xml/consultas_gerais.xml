@@ -1,0 +1,221 @@
+<ubs.Consulta_-1 serialization="custom">
+  <unserializable-parents/>
+  <list>
+    <default>
+      <size>5</size>
+    </default>
+    <int>5</int>
+    <ubs.ConsultaMedica>
+      <todas class="ubs.Consulta$1" reference="../../.."/>
+      <nomePaciente>Alex Fialho</nomePaciente>
+      <nomeMedico>Luiz Camargo</nomeMedico>
+      <dia>6</dia>
+      <mes>6</mes>
+      <ano>2016</ano>
+      <tipo>medico</tipo>
+      <triagem>
+        <temperatura>40.0</temperatura>
+        <pressão>14/6</pressão>
+        <classificacaoDeRisco>1</classificacaoDeRisco>
+        <finalizado>true</finalizado>
+        <autor>Natalina Fialho</autor>
+      </triagem>
+      <prontuario>
+        <autor>Luiz Camargo</autor>
+        <data>2016-06-05 23:43:31.701 UTC</data>
+        <texto>Paciente diagnosticado com dengue. Passarei os medicamentos e procedimentos corretos.</texto>
+        <dorNoCorpo>true</dorNoCorpo>
+        <dorAtrasOlhos>true</dorAtrasOlhos>
+        <fraqueza>true</fraqueza>
+        <vomitos>true</vomitos>
+        <dorEInchacoArticulacoes>false</dorEInchacoArticulacoes>
+        <manchesVermelhas>false</manchesVermelhas>
+        <coceira>false</coceira>
+        <doresMusculares>false</doresMusculares>
+        <finalizado>true</finalizado>
+        <dengue>true</dengue>
+        <chikungunya>false</chikungunya>
+        <zika>false</zika>
+        <saudavel>false</saudavel>
+        <limpeza>false</limpeza>
+        <obturacao>false</obturacao>
+      </prontuario>
+    </ubs.ConsultaMedica>
+    <ubs.ConsultaDentista>
+      <todas class="ubs.Consulta$1" reference="../../.."/>
+      <nomePaciente>Alex Fialho</nomePaciente>
+      <nomeMedico>Maria Maddi</nomeMedico>
+      <dia>8</dia>
+      <mes>9</mes>
+      <ano>2016</ano>
+      <tipo>dentista</tipo>
+      <triagem defined-in="ubs.Consulta">
+        <temperatura>0.0</temperatura>
+        <pressão>Não iniciado</pressão>
+        <classificacaoDeRisco>0</classificacaoDeRisco>
+        <finalizado>false</finalizado>
+      </triagem>
+      <prontuario>
+        <autor>Maria Maddi</autor>
+        <data>2016-06-05 23:40:48.196 UTC</data>
+        <texto>Não iniciado</texto>
+        <dorNoCorpo>false</dorNoCorpo>
+        <dorAtrasOlhos>false</dorAtrasOlhos>
+        <fraqueza>false</fraqueza>
+        <vomitos>false</vomitos>
+        <dorEInchacoArticulacoes>false</dorEInchacoArticulacoes>
+        <manchesVermelhas>false</manchesVermelhas>
+        <coceira>false</coceira>
+        <doresMusculares>false</doresMusculares>
+        <finalizado>false</finalizado>
+        <dengue>false</dengue>
+        <chikungunya>false</chikungunya>
+        <zika>false</zika>
+        <saudavel>false</saudavel>
+        <limpeza>false</limpeza>
+        <obturacao>false</obturacao>
+      </prontuario>
+    </ubs.ConsultaDentista>
+    <ubs.ConsultaMedica>
+      <todas class="ubs.Consulta$1" reference="../../.."/>
+      <nomePaciente>Lukas Fialho</nomePaciente>
+      <nomeMedico>Luiz Camargo</nomeMedico>
+      <dia>7</dia>
+      <mes>6</mes>
+      <ano>2016</ano>
+      <tipo>medico</tipo>
+      <triagem>
+        <temperatura>0.0</temperatura>
+        <pressão>Não iniciado</pressão>
+        <classificacaoDeRisco>0</classificacaoDeRisco>
+        <finalizado>false</finalizado>
+      </triagem>
+      <prontuario>
+        <autor>Luiz Camargo</autor>
+        <data>2016-06-05 23:41:12.474 UTC</data>
+        <texto>Não iniciado</texto>
+        <dorNoCorpo>false</dorNoCorpo>
+        <dorAtrasOlhos>false</dorAtrasOlhos>
+        <fraqueza>false</fraqueza>
+        <vomitos>false</vomitos>
+        <dorEInchacoArticulacoes>false</dorEInchacoArticulacoes>
+        <manchesVermelhas>false</manchesVermelhas>
+        <coceira>false</coceira>
+        <doresMusculares>false</doresMusculares>
+        <finalizado>false</finalizado>
+        <dengue>false</dengue>
+        <chikungunya>false</chikungunya>
+        <zika>false</zika>
+        <saudavel>false</saudavel>
+        <limpeza>false</limpeza>
+        <obturacao>false</obturacao>
+      </prontuario>
+    </ubs.ConsultaMedica>
+    <ubs.ConsultaDentista>
+      <todas class="ubs.Consulta$1" reference="../../.."/>
+      <nomePaciente>Lukas Fialho</nomePaciente>
+      <nomeMedico>Roberto Maddi</nomeMedico>
+      <dia>15</dia>
+      <mes>10</mes>
+      <ano>2016</ano>
+      <tipo>dentista</tipo>
+      <triagem defined-in="ubs.Consulta">
+        <temperatura>0.0</temperatura>
+        <pressão>Não iniciado</pressão>
+        <classificacaoDeRisco>0</classificacaoDeRisco>
+        <finalizado>false</finalizado>
+      </triagem>
+      <prontuario>
+        <autor>Roberto Maddi</autor>
+        <data>2016-06-05 23:41:20.75 UTC</data>
+        <texto>Não iniciado</texto>
+        <dorNoCorpo>false</dorNoCorpo>
+        <dorAtrasOlhos>false</dorAtrasOlhos>
+        <fraqueza>false</fraqueza>
+        <vomitos>false</vomitos>
+        <dorEInchacoArticulacoes>false</dorEInchacoArticulacoes>
+        <manchesVermelhas>false</manchesVermelhas>
+        <coceira>false</coceira>
+        <doresMusculares>false</doresMusculares>
+        <finalizado>false</finalizado>
+        <dengue>false</dengue>
+        <chikungunya>false</chikungunya>
+        <zika>false</zika>
+        <saudavel>false</saudavel>
+        <limpeza>false</limpeza>
+        <obturacao>false</obturacao>
+      </prontuario>
+    </ubs.ConsultaDentista>
+    <ubs.ConsultaMedica>
+      <todas class="ubs.Consulta$1" reference="../../.."/>
+      <nomePaciente>Hanna Fialho</nomePaciente>
+      <nomeMedico>Luiz Camargo</nomeMedico>
+      <dia>15</dia>
+      <mes>6</mes>
+      <ano>2016</ano>
+      <tipo>medico</tipo>
+      <triagem>
+        <temperatura>0.0</temperatura>
+        <pressão>Não iniciado</pressão>
+        <classificacaoDeRisco>0</classificacaoDeRisco>
+        <finalizado>false</finalizado>
+      </triagem>
+      <prontuario>
+        <autor>Luiz Camargo</autor>
+        <data>2016-06-05 23:41:57.509 UTC</data>
+        <texto>Não iniciado</texto>
+        <dorNoCorpo>false</dorNoCorpo>
+        <dorAtrasOlhos>false</dorAtrasOlhos>
+        <fraqueza>false</fraqueza>
+        <vomitos>false</vomitos>
+        <dorEInchacoArticulacoes>false</dorEInchacoArticulacoes>
+        <manchesVermelhas>false</manchesVermelhas>
+        <coceira>false</coceira>
+        <doresMusculares>false</doresMusculares>
+        <finalizado>false</finalizado>
+        <dengue>false</dengue>
+        <chikungunya>false</chikungunya>
+        <zika>false</zika>
+        <saudavel>false</saudavel>
+        <limpeza>false</limpeza>
+        <obturacao>false</obturacao>
+      </prontuario>
+    </ubs.ConsultaMedica>
+  </list>
+  <ubs.Consulta_-1>
+    <default>
+      <outer-class>
+        <todas class="ubs.Consulta$1" reference="../../../.."/>
+        <dia>0</dia>
+        <mes>0</mes>
+        <ano>0</ano>
+        <triagem>
+          <temperatura>0.0</temperatura>
+          <pressão>Não iniciado</pressão>
+          <classificacaoDeRisco>0</classificacaoDeRisco>
+          <finalizado>false</finalizado>
+        </triagem>
+        <prontuario>
+          <autor>Não iniciado</autor>
+          <data>2016-06-05 23:29:11.544 UTC</data>
+          <texto>Não iniciado</texto>
+          <dorNoCorpo>false</dorNoCorpo>
+          <dorAtrasOlhos>false</dorAtrasOlhos>
+          <fraqueza>false</fraqueza>
+          <vomitos>false</vomitos>
+          <dorEInchacoArticulacoes>false</dorEInchacoArticulacoes>
+          <manchesVermelhas>false</manchesVermelhas>
+          <coceira>false</coceira>
+          <doresMusculares>false</doresMusculares>
+          <finalizado>false</finalizado>
+          <dengue>false</dengue>
+          <chikungunya>false</chikungunya>
+          <zika>false</zika>
+          <saudavel>false</saudavel>
+          <limpeza>false</limpeza>
+          <obturacao>false</obturacao>
+        </prontuario>
+      </outer-class>
+    </default>
+  </ubs.Consulta_-1>
+</ubs.Consulta_-1>

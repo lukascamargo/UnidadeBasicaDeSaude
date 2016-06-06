@@ -11,5 +11,5 @@ package ubs;
  */
 public class ConsultaDentista extends Consulta{
     Triagem triagem = null;
-    PEP prontuario = null;
+    
 }

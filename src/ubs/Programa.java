@@ -28,6 +28,8 @@ public class Programa {
                 case 2:
                     OptionsCadastrar();
                     break;
+                case 3:
+                    break;
                 default:
                     break;
             }

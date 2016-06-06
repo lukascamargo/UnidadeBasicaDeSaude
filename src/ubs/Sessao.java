@@ -61,6 +61,8 @@ public class Sessao {
                         case 3:
                             consulta.consultarProntuario(mail);
                             break;
+                        case 4:
+                            break;
                         default:
                             System.out.println("Ops! Opção inválida");
                             break;
@@ -78,13 +80,68 @@ public class Sessao {
                         case 1:
                             con.escolherTriagem(mail);
                             break;
+                        case 2:
+                            break;
                         default:
                             System.out.println("Ops! Opção inválida.");
                     }
                 } while(opcao != 2);
-            }
+            } else if(titulo.equals("medico")){
+                int opcao = 0;
+                do{
+                    showOptionsToDoctor();
+                    System.out.print("R: ");
+                    opcao = leitor.nextInt();
+                    Consulta con = new Consulta();
+                    switch(opcao){
+                        case 1:
+                            con.mostrarAgendaMedico(mail);
+                            break;
+                        case 2:
+                            con.medicoAtender(mail);
+                            break;
+                        case 3:
+                            con.atendimentosFinalizados(mail);
+                            break;
+                        case 4:
+                            break;
+                        default:
+                            System.out.println("Ops! Opção inválida");
+                            break;
+                    }
+                }while (opcao != 4);
+            } else if(titulo.equals("dentista")){
+                int opcao = 0;
+                do{
+                    showOptionsToDoctor();
+                    System.out.print("R: ");
+                    opcao = leitor.nextInt();
+                    Consulta con = new Consulta();
+                    switch(opcao){
+                        case 1:
+                            con.mostrarAgendaDentista(mail);
+                            break;
+                        case 2:
+                            con.dentistaAtender(mail);
+                            break;
+                        case 3:
+                            con.atendimentosFinalizados(mail);
+                            break;
+                        case 4:
+                            break;
+                        default:
+                            System.out.println("Ops! Opção inválida");
+                            break;
+                    }
+                }while (opcao != 4);
+                }
         }
         
     }
-    
+    public static void showOptionsToDoctor(){
+        System.out.println("\n1 - Minha agenda");
+        System.out.println("2 - Atender");
+        System.out.println("3 - Meus atendimentos finalizados");
+        System.out.println("4 - Encerrar");
+    }
 }

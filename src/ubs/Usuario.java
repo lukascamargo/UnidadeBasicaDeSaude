@@ -227,7 +227,8 @@ public class Usuario {
             consulta.setData(dia, mes, ano);
             consulta.adicionarNaLista(consulta);
             consulta.prontuario.autor = nomeMedico;
-            System.out.println("Consulta agendada!");
+            consulta.tipo = "medico";
+            System.out.println("Consulta agendada com " + nomeMedico + ", dia " + dia + "/" + mes + "/" + ano + ".");
             consulta.salvarConsultas();
         }
     }
@@ -267,16 +268,14 @@ public class Usuario {
         
         consulta.lerConsultas();
         if(consulta.testaData(dia + "/" + mes + "/" + ano, nomeDentista)){
-            System.out.println("Data já reservada.");
+            System.out.println("Data já reservada. Escolha uma nova.");
         }else{
             
             consulta.setData(dia, mes, ano);
             consulta.adicionarNaLista(consulta);
             consulta.prontuario.autor = nomeDentista;
-            consulta.triagem.classificacaoDeRisco = 0;
-            consulta.triagem.pressão = null;
-            consulta.triagem.temperatura = 0.0;
-            System.out.println("Consulta agendada!");
+            consulta.tipo = "dentista";
+            System.out.println("Consulta agendada com " + nomeDentista + ", dia " + dia + "/" + mes + "/" + ano + ".");
             consulta.salvarConsultas();
         }
     }
